@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.Toast
+import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -38,18 +39,50 @@ class PulsaFragment : Fragment(),
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel.getPulsaList()
-        viewModel.getVoucherList()
-        observeData()
+        setViewInputNumberMobile()
+    }
 
-        binding.textviewNumberMobile.onRightDrawableClicked {
-            it.text.clear()
+    private fun setViewInputNumberMobile() {
+        binding.textviewNumberMobile.apply {
+            onRightDrawableClicked {
+                it.text.clear()
+                setViewGone()
+            }
+
+            doAfterTextChanged {
+                if (!text.isNullOrBlank() && text?.length == 4) {
+                    viewModel.getPulsaList()
+                    viewModel.getVoucherList()
+                    observeData()
+                } else {
+                    setViewGone()
+                }
+            }
         }
+    }
 
+    @SuppressLint("ClickableViewAccessibility")
+    private fun EditText.onRightDrawableClicked(onClicked: (view: EditText) -> Unit) {
+        this.setOnTouchListener { v, event ->
+            var hasConsumed = false
+            if (v is EditText) {
+                if (event.x >= v.width - v.totalPaddingRight) {
+                    if (event.action == MotionEvent.ACTION_UP) {
+                        onClicked(this)
+                    }
+                    hasConsumed = true
+                }
+            }
+            hasConsumed
+        }
     }
 
     private fun observeData() {
         viewModel.pulsaListResult.observe(viewLifecycleOwner) { data ->
+            if (data != null) {
+                setViewVisible()
+            }
+
             val pulsaAdapter =
                 data?.let { listPulsa -> PulsaAdapter(listPulsa, this@PulsaFragment) }
 
@@ -70,22 +103,21 @@ class PulsaFragment : Fragment(),
         }
     }
 
-    @SuppressLint("ClickableViewAccessibility")
-    private fun EditText.onRightDrawableClicked(onClicked: (view: EditText) -> Unit) {
-        this.setOnTouchListener { v, event ->
-            var hasConsumed = false
-            if (v is EditText) {
-                if (event.x >= v.width - v.totalPaddingRight) {
-                    if (event.action == MotionEvent.ACTION_UP) {
-                        onClicked(this)
-                    }
-                    hasConsumed = true
-                }
-            }
-            hasConsumed
-        }
+    private fun setViewVisible() {
+        binding.line1.visibility = View.VISIBLE
+        binding.line2.visibility = View.VISIBLE
+        binding.rvListPulsa.visibility = View.VISIBLE
+        binding.rvListPromos.visibility = View.VISIBLE
+        binding.tvPromos.visibility = View.VISIBLE
     }
 
+    private fun setViewGone() {
+        binding.line1.visibility = View.GONE
+        binding.line2.visibility = View.GONE
+        binding.rvListPulsa.visibility = View.GONE
+        binding.rvListPromos.visibility = View.GONE
+        binding.tvPromos.visibility = View.GONE
+    }
 
     override fun onDestroyView() {
         super.onDestroyView()

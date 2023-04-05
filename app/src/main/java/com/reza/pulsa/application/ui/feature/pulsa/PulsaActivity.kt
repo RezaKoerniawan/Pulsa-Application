@@ -18,7 +18,7 @@ class PulsaActivity : AppCompatActivity() {
         val adapter = ViewPagerAdapter(supportFragmentManager)
 
         adapter.addFragment(PulsaFragment(), getString(R.string.title_tab_pulsa))
-        adapter.addFragment(FirstFragment(), getString(R.string.title_tab_paket_data))
+        adapter.addFragment(PulsaFragment(), getString(R.string.title_tab_paket_data))
 
         binding.viewPager.adapter = adapter
         binding.tbLayout.setupWithViewPager(binding.viewPager)
