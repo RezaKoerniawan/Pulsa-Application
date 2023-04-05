@@ -57,6 +57,7 @@ dependencies {
     implementation(libs.koin.android)
     implementation(libs.chucker)
     implementation(libs.legacy.support.v4)
+    implementation(libs.glide)
     testImplementation(libs.junit)
     testImplementation(libs.kotlinx.coroutines.test)
     testImplementation(libs.koin.test)

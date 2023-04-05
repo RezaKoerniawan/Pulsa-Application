@@ -30,6 +30,8 @@ koin-test-junit4 = "3.2.0"
 #chucker
 chucker = "3.5.2"
 legacy-support-v4 = "1.0.0"
+#glide
+glide = "4.12.0"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
@@ -55,6 +57,7 @@ koin-test = { group = "io.insert-koin", name = "koin-test", version.ref = "koin-
 koin-test-junit4 = { group = "io.insert-koin", name = "koin-test-junit4", version.ref = "koin-test-junit4" }
 chucker = { group = "com.github.chuckerteam.chucker", name = "library", version.ref = "chucker" }
 legacy-support-v4 = { group = "androidx.legacy", name = "legacy-support-v4", version.ref = "legacy-support-v4" }
+glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
 
 [plugins]
 com-android-application = { id = "com.android.application", version.ref = "com-android-application" }

@@ -7,6 +7,7 @@ import com.reza.pulsa.application.data.network.datasource.PulsaNetworkDataSource
 import com.reza.pulsa.application.data.repository.PulsaRepository
 import com.reza.pulsa.application.data.repository.PulsaRepositoryImpl
 import com.reza.pulsa.application.domain.GetPulsaUseCase
+import com.reza.pulsa.application.domain.GetVoucherUseCase
 import com.reza.pulsa.application.ui.feature.pulsa.PulsaViewModel
 import com.reza.pulsa.application.ui.feature.voucher.VoucherViewModel
 import kotlinx.coroutines.Dispatchers
@@ -29,6 +30,7 @@ object InjectionModules {
     }
     private val useCases = module {
         single { GetPulsaUseCase(get(), dispatcher = Dispatchers.IO) }
+        single { GetVoucherUseCase(get(), dispatcher = Dispatchers.IO) }
     }
     private val viewModels = module {
         viewModelOf(::PulsaViewModel)
