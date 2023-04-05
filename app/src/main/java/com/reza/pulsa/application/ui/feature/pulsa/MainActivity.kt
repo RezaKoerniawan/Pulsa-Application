@@ -1,4 +1,4 @@
-package com.reza.pulsa.application
+package com.reza.pulsa.application.ui.feature.pulsa
 
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
@@ -9,6 +9,7 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+import com.reza.pulsa.application.R
 import com.reza.pulsa.application.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

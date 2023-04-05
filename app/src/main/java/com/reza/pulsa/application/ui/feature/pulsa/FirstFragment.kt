@@ -1,11 +1,13 @@
-package com.reza.pulsa.application
+package com.reza.pulsa.application.ui.feature.pulsa
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.reza.pulsa.application.R
 import com.reza.pulsa.application.databinding.FragmentFirstBinding
 
 /**
