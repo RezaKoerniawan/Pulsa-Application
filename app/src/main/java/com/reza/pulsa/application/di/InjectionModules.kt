@@ -8,6 +8,7 @@ import com.reza.pulsa.application.data.repository.PulsaRepository
 import com.reza.pulsa.application.data.repository.PulsaRepositoryImpl
 import com.reza.pulsa.application.domain.GetPulsaUseCase
 import com.reza.pulsa.application.ui.feature.pulsa.PulsaViewModel
+import com.reza.pulsa.application.ui.feature.voucher.VoucherViewModel
 import kotlinx.coroutines.Dispatchers
 import org.koin.android.ext.koin.androidContext
 import org.koin.androidx.viewmodel.dsl.viewModelOf
@@ -31,6 +32,7 @@ object InjectionModules {
     }
     private val viewModels = module {
         viewModelOf(::PulsaViewModel)
+        viewModelOf(::VoucherViewModel)
     }
 
 }

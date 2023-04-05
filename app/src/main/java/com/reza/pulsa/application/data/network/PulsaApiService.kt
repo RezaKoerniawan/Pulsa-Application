@@ -2,6 +2,8 @@ package com.reza.pulsa.application.data.network
 
 import com.chuckerteam.chucker.api.ChuckerInterceptor
 import com.reza.pulsa.application.data.network.model.response.pulsa.PulsaListResponse
+import com.reza.pulsa.application.data.network.model.response.status.StatusPageResponse
+import com.reza.pulsa.application.data.network.model.response.voucher.VoucherListResponse
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -13,11 +15,11 @@ interface PulsaApiService {
     @GET("59fced1c-2310-4455-b3b7-047e8acd46f3")
     suspend fun getPulsaItem(): PulsaListResponse
 
-    @GET("08628435-198c-4925-aa6e-00ec923bfc70")
-    suspend fun getVoucherItem()
+    @GET("3b567c89-e239-40ee-8e8b-c4caba7abd7a")
+    suspend fun getVoucherItem(): VoucherListResponse
 
-    @GET("e1be6ceb-7ddd-41cb-9cd6-9407c14bf77e")
-    suspend fun getStatusPage()
+    @GET("2af4735c-6574-40b0-9789-f48212c8d543")
+    suspend fun getStatusPage(): StatusPageResponse
 
     companion object {
         @JvmStatic
