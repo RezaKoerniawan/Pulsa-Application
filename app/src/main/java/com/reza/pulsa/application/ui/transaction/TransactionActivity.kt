@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.reza.pulsa.application.R
 import com.reza.pulsa.application.data.local.Constants
 import com.reza.pulsa.application.databinding.ActivityTransactionBinding
+import com.reza.pulsa.application.ui.status.StatusActivity
 import com.reza.pulsa.application.ui.voucher.VoucherActivity
 import com.reza.pulsa.application.utils.Utils
 
@@ -62,9 +63,10 @@ class TransactionActivity : AppCompatActivity() {
     }
 
     private fun handlePaymentButton() {
-        if (!binding.textviewPin.text.isNullOrEmpty() && binding.textviewPin.text?.length == 6) {
-            // next screen
+        if (!binding.textviewPin.text.isNullOrEmpty() && binding.textviewPin.text?.length!! >= 6) {
             binding.textInputPin.error = null
+            val intent = Intent(this, StatusActivity::class.java)
+            startActivity(intent)
         } else {
             binding.textInputPin.error = "Please input your 6 PIN"
         }

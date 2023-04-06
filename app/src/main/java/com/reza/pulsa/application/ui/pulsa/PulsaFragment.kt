@@ -53,7 +53,7 @@ class PulsaFragment : Fragment(),
             }
 
             doAfterTextChanged {
-                if (!text.isNullOrBlank() && text?.length == 4) {
+                if (!text.isNullOrBlank() && text?.length!! >= 4) {
                     viewModel.getPulsaList()
                     viewModel.getVoucherList()
                     observeData()
