@@ -5,7 +5,7 @@ import com.reza.pulsa.application.base.wrapper.DataResource
 import com.reza.pulsa.application.base.wrapper.ViewResource
 import com.reza.pulsa.application.data.network.model.entity.pulsa.ProductItem
 import com.reza.pulsa.application.data.repository.PulsaRepository
-import com.reza.pulsa.application.mapper.ProductPulsaListMapper
+import com.reza.pulsa.application.data.mapper.ProductPulsaListMapper
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map

@@ -5,7 +5,7 @@ import com.reza.pulsa.application.base.wrapper.DataResource
 import com.reza.pulsa.application.base.wrapper.ViewResource
 import com.reza.pulsa.application.data.network.model.entity.status.TransactionContext
 import com.reza.pulsa.application.data.repository.PulsaRepository
-import com.reza.pulsa.application.mapper.StatusPaymentMapper
+import com.reza.pulsa.application.data.mapper.StatusPaymentMapper
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map

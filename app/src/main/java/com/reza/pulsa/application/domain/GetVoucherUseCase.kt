@@ -5,7 +5,7 @@ import com.reza.pulsa.application.base.wrapper.DataResource
 import com.reza.pulsa.application.base.wrapper.ViewResource
 import com.reza.pulsa.application.data.network.model.entity.voucher.VoucherItem
 import com.reza.pulsa.application.data.repository.PulsaRepository
-import com.reza.pulsa.application.mapper.VoucherItemListMapper
+import com.reza.pulsa.application.data.mapper.VoucherItemListMapper
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
