@@ -1,4 +1,4 @@
-package com.reza.pulsa.application.ui.feature.voucher.adapter
+package com.reza.pulsa.application.ui.voucher.adapter
 
 import android.view.LayoutInflater
 import android.view.View

@@ -1,10 +1,10 @@
-package com.reza.pulsa.application.ui.feature.pulsa
+package com.reza.pulsa.application.ui.pulsa
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.reza.pulsa.application.R
 import com.reza.pulsa.application.databinding.ActivityPulsaBinding
-import com.reza.pulsa.application.ui.feature.pulsa.adapter.ViewPagerAdapter
+import com.reza.pulsa.application.ui.pulsa.adapter.ViewPagerAdapter
 
 class PulsaActivity : AppCompatActivity() {
     private lateinit var binding: ActivityPulsaBinding

@@ -1,4 +1,4 @@
-package com.reza.pulsa.application.ui.feature.pulsa.adapter
+package com.reza.pulsa.application.ui.pulsa.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager

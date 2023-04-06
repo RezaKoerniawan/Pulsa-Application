@@ -1,4 +1,4 @@
-package com.reza.pulsa.application.ui.feature.pulsa.adapter
+package com.reza.pulsa.application.ui.pulsa.adapter
 
 import android.view.LayoutInflater
 import android.view.View

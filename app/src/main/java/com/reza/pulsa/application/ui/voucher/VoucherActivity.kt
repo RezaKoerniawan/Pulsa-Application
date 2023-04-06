@@ -1,4 +1,4 @@
-package com.reza.pulsa.application.ui.feature.voucher
+package com.reza.pulsa.application.ui.voucher
 
 import android.app.Activity
 import android.content.Intent
@@ -10,7 +10,7 @@ import com.reza.pulsa.application.R
 import com.reza.pulsa.application.data.local.Constants
 import com.reza.pulsa.application.data.network.model.entity.voucher.VoucherItem
 import com.reza.pulsa.application.databinding.ActivityVoucherBinding
-import com.reza.pulsa.application.ui.feature.voucher.adapter.VoucherAdapter
+import com.reza.pulsa.application.ui.voucher.adapter.VoucherAdapter
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class VoucherActivity : AppCompatActivity(), VoucherAdapter.RecyclerViewClickListener {

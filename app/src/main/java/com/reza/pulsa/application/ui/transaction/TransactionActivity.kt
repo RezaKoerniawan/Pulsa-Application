@@ -1,4 +1,4 @@
-package com.reza.pulsa.application.ui.feature.transaction
+package com.reza.pulsa.application.ui.transaction
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.reza.pulsa.application.R
 import com.reza.pulsa.application.data.local.Constants
 import com.reza.pulsa.application.databinding.ActivityTransactionBinding
-import com.reza.pulsa.application.ui.feature.voucher.VoucherActivity
+import com.reza.pulsa.application.ui.voucher.VoucherActivity
 import com.reza.pulsa.application.utils.Utils
 
 class TransactionActivity : AppCompatActivity() {

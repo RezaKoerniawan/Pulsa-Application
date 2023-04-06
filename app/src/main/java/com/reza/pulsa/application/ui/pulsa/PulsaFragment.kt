@@ -1,4 +1,4 @@
-package com.reza.pulsa.application.ui.feature.pulsa
+package com.reza.pulsa.application.ui.pulsa
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -16,10 +16,10 @@ import com.reza.pulsa.application.data.local.Constants
 import com.reza.pulsa.application.data.network.model.entity.pulsa.ProductItem
 import com.reza.pulsa.application.data.network.model.entity.voucher.VoucherItem
 import com.reza.pulsa.application.databinding.FragmentPulsaBinding
-import com.reza.pulsa.application.ui.feature.promos.DetailPromosActivity
-import com.reza.pulsa.application.ui.feature.pulsa.adapter.PromosAdapter
-import com.reza.pulsa.application.ui.feature.pulsa.adapter.PulsaAdapter
-import com.reza.pulsa.application.ui.feature.transaction.TransactionActivity
+import com.reza.pulsa.application.ui.promos.DetailPromosActivity
+import com.reza.pulsa.application.ui.pulsa.adapter.PromosAdapter
+import com.reza.pulsa.application.ui.pulsa.adapter.PulsaAdapter
+import com.reza.pulsa.application.ui.transaction.TransactionActivity
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class PulsaFragment : Fragment(),

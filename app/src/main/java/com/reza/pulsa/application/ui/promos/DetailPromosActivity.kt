@@ -1,4 +1,4 @@
-package com.reza.pulsa.application.ui.feature.promos
+package com.reza.pulsa.application.ui.promos
 
 import android.content.ClipData
 import android.content.ClipboardManager
