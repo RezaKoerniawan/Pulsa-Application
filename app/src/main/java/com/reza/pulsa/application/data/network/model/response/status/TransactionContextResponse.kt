@@ -15,7 +15,7 @@ data class TransactionContextResponse(
     @SerializedName("item_list")
     val itemResponseList: List<ItemResponse?>? = null,
     @SerializedName("merchant_details")
-    val merchantDetailsResponse: MerchantDetailsResponse? = null,
+    val merchantDetails: MerchantDetailsResponse? = null,
     @SerializedName("order_id")
     val orderId: String? = null,
     @SerializedName("transaction_status")

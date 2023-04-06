@@ -15,6 +15,7 @@ class TransactionActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityTransactionBinding
 
+    private var numberMobile:String? = null
     private val SECOND_ACTIVITY_REQUEST_CODE = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,7 +36,7 @@ class TransactionActivity : AppCompatActivity() {
             val bundle = intent.extras
             val nominalIDR = bundle?.getString(Constants.EXTRA_NOMINAL)?.toDouble()
                 ?.let { Utils().formatRupiah(it) }
-            val numberMobile = bundle?.getString(Constants.EXTRA_NUMBER_MOBILE)
+            numberMobile = bundle?.getString(Constants.EXTRA_NUMBER_MOBILE)
 
             binding.tvNumberMobile.text = numberMobile
 
@@ -65,8 +66,13 @@ class TransactionActivity : AppCompatActivity() {
     private fun handlePaymentButton() {
         if (!binding.textviewPin.text.isNullOrEmpty() && binding.textviewPin.text?.length!! >= 6) {
             binding.textInputPin.error = null
+
+            val bundle = Bundle()
+            bundle.putString(Constants.EXTRA_NUMBER_MOBILE, numberMobile)
             val intent = Intent(this, StatusActivity::class.java)
+            intent.putExtras(bundle)
             startActivity(intent)
+
         } else {
             binding.textInputPin.error = "Please input your 6 PIN"
         }

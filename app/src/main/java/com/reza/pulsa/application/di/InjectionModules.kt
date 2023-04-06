@@ -7,8 +7,10 @@ import com.reza.pulsa.application.data.network.datasource.PulsaNetworkDataSource
 import com.reza.pulsa.application.data.repository.PulsaRepository
 import com.reza.pulsa.application.data.repository.PulsaRepositoryImpl
 import com.reza.pulsa.application.domain.GetPulsaUseCase
+import com.reza.pulsa.application.domain.GetStatusUseCase
 import com.reza.pulsa.application.domain.GetVoucherUseCase
 import com.reza.pulsa.application.ui.pulsa.PulsaViewModel
+import com.reza.pulsa.application.ui.status.StatusViewModel
 import com.reza.pulsa.application.ui.voucher.VoucherViewModel
 import kotlinx.coroutines.Dispatchers
 import org.koin.android.ext.koin.androidContext
@@ -31,10 +33,12 @@ object InjectionModules {
     private val useCases = module {
         single { GetPulsaUseCase(get(), dispatcher = Dispatchers.IO) }
         single { GetVoucherUseCase(get(), dispatcher = Dispatchers.IO) }
+        single { GetStatusUseCase(get(), dispatcher = Dispatchers.IO) }
     }
     private val viewModels = module {
         viewModelOf(::PulsaViewModel)
         viewModelOf(::VoucherViewModel)
+        viewModelOf(::StatusViewModel)
     }
 
 }
