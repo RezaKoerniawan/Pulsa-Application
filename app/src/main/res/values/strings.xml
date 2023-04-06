@@ -20,6 +20,9 @@
     <string name="text_voucher_label_tern_condition">Terms And Condition</string>
     <string name="text_voucher_tern_condition">Terms And Condition Terms And Condition Terms And Condition Terms And Condition Terms And Condition Terms And Condition Terms And Condition Terms And Condition Terms And Condition</string>
     <string name="text_label_payment_details">Rincian Pembayaran</string>
+    <string name="text_label_order_details">Detail Pesanan</string>
+    <string name="text_label_payments_details">Detail Pembayaran</string>
+    <string name="text_label_payments_amount">Bayar dalam 30 hari</string>
     <string name="text_label_operator">Indosat %s (+62-%s)</string>
     <string name="text_label_service_fee">Biaya Layanan</string>
     <string name="text_label_kredivo_discount">Kredivo Diskon</string>
@@ -34,12 +37,19 @@
     <string name="text_btn_voucher_for_you">Lihat</string>
     <string name="text_btn_voucher_for_you_applied">Yeay! Kamu mendapatkan promo cicilan 0%</string>
     <string name="text_btn_payment">Bayar</string>
+    <string name="text_btn_ok">Oke</string>
     <string name="text_label_pin">PIN Kredivo</string>
     <string name="text_hint_pin">PIN</string>
     <string name="text_label_agreement_loan">Dengan melanjutkan saya setuju dengan Perjanjian Pinjaman Kredivo</string>
     <string name="text_label_voucher_date">Berlaku hingga 6 April 2023</string>
     <string name="text_label_voucher_use">Pakai</string>
     <string name="text_label_voucher_new">Baru</string>
+    <string name="text_label_order_detail_status">Status</string>
+    <string name="text_label_order_detail_status_value">Transaksi Berhasil</string>
+    <string name="text_label_order_detail_id">Order ID</string>
+    <string name="text_label_order_detail_id_value">KB-3qkvsa2Pda</string>
+    <string name="text_label_order_admin_fee">Admin Fee</string>
+    <string name="text_label_help">Jika kamu punya kendala terkait transaksimu, pastikan untuk menghubungi customer service kami di 08120345678 atau support@kredivo.com</string>
 
 
 </resources>

@@ -27,6 +27,10 @@ class StatusActivity : AppCompatActivity() {
             }
         }
 
+        binding.btnOk.setOnClickListener {
+            handleBackToStartScreen()
+        }
+
 
     }
 
