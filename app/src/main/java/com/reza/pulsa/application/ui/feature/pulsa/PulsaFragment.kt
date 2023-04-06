@@ -1,6 +1,7 @@
 package com.reza.pulsa.application.ui.feature.pulsa
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.MotionEvent
@@ -12,9 +13,11 @@ import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.reza.pulsa.application.data.local.Constants
 import com.reza.pulsa.application.data.network.model.entity.pulsa.ProductItem
 import com.reza.pulsa.application.data.network.model.entity.voucher.VoucherItem
 import com.reza.pulsa.application.databinding.FragmentPulsaBinding
+import com.reza.pulsa.application.ui.feature.promos.DetailPromosActivity
 import com.reza.pulsa.application.ui.feature.pulsa.adapter.PromosAdapter
 import com.reza.pulsa.application.ui.feature.pulsa.adapter.PulsaAdapter
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -133,11 +136,14 @@ class PulsaFragment : Fragment(),
     }
 
     override fun onItemClicked(view: View, voucherList: VoucherItem) {
-        Toast.makeText(
-            requireContext(),
-            "Promos ${voucherList.name} berhasil di klik",
-            Toast.LENGTH_SHORT
-        ).show()
+        activity?.let {
+            val bundle = Bundle()
+            bundle.putString(Constants.EXTRA_PROMO_IMAGE, voucherList.imageUrl)
+            bundle.putString(Constants.EXTRA_PROMO_CODE, voucherList.voucherCode)
+            val intent = Intent(it, DetailPromosActivity::class.java)
+            intent.putExtras(bundle)
+            it.startActivity(intent)
+        }
     }
 
 }

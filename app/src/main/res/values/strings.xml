@@ -3,9 +3,17 @@
     <string name="no_internet_connection">No Internet Connection, Please check your internet connection and retry again.</string>
     <string name="unknown_error">Something\'s wrong when fetching data. please try again later</string>
     <string name="title_page_top_up">Top Up</string>
+    <string name="title_page_merchant_promo">Merchant Promo</string>
     <string name="title_tab_pulsa">Pulsa</string>
     <string name="title_tab_paket_data">Paket Data</string>
     <string name="text_hint_phone_number">Mobile Number</string>
     <string name="text_label_promos">Promos</string>
     <string name="text_label_nominal">Nominal :</string>
+    <string name="text_promo_name">Discount 20% at Kedai Hape Original, Mall Kota Kasablanka</string>
+    <string name="text_label_promo_date">Valid Date</string>
+    <string name="text_promo_date">6 April 2023</string>
+    <string name="text_label_voucher_code">Voucher Code</string>
+    <string name="text_btn_copy_voucher_code">COPY</string>
+    <string name="text_voucher_label_tern_condition">Terms And Condition</string>
+    <string name="text_voucher_tern_condition">Terms And Condition Terms And Condition Terms And Condition Terms And Condition Terms And Condition Terms And Condition Terms And Condition Terms And Condition Terms And Condition</string>
 </resources>
