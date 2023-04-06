@@ -5,4 +5,5 @@ object Constants {
     const val  EXTRA_NOMINAL = "EXTRA_NOMINAL"
     const val  EXTRA_PROMO_IMAGE = "EXTRA_PROMO_IMAGE"
     const val  EXTRA_PROMO_CODE = "EXTRA_PROMO_CODE"
+    const val  EXTRA_VOUCHER_CODE = "EXTRA_VOUCHER_CODE"
 }

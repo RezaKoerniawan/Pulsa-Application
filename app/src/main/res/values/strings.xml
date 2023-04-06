@@ -5,6 +5,7 @@
     <string name="title_page_top_up">Top Up</string>
     <string name="title_page_merchant_promo">Merchant Promo</string>
     <string name="title_page_confirmation_payment">Konfirmasi Pembayaran</string>
+    <string name="title_page_my_voucher">Voucher Saya</string>
     <string name="title_tab_pulsa">Pulsa</string>
     <string name="title_tab_paket_data">Paket Data</string>
     <string name="text_hint_phone_number">Mobile Number</string>
@@ -35,7 +36,9 @@
     <string name="text_label_pin">PIN Kredivo</string>
     <string name="text_hint_pin">PIN</string>
     <string name="text_label_agreement_loan">Dengan melanjutkan saya setuju dengan Perjanjian Pinjaman Kredivo</string>
-
+    <string name="text_label_voucher_date">Berlaku hingga 6 April 2023</string>
+    <string name="text_label_voucher_use">Pakai</string>
+    <string name="text_label_voucher_new">Baru</string>
 
 
 </resources>
