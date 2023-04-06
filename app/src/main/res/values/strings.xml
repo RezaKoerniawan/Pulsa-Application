@@ -4,6 +4,7 @@
     <string name="unknown_error">Something\'s wrong when fetching data. please try again later</string>
     <string name="title_page_top_up">Top Up</string>
     <string name="title_page_merchant_promo">Merchant Promo</string>
+    <string name="title_page_confirmation_payment">Konfirmasi Pembayaran</string>
     <string name="title_tab_pulsa">Pulsa</string>
     <string name="title_tab_paket_data">Paket Data</string>
     <string name="text_hint_phone_number">Mobile Number</string>
@@ -16,4 +17,25 @@
     <string name="text_btn_copy_voucher_code">COPY</string>
     <string name="text_voucher_label_tern_condition">Terms And Condition</string>
     <string name="text_voucher_tern_condition">Terms And Condition Terms And Condition Terms And Condition Terms And Condition Terms And Condition Terms And Condition Terms And Condition Terms And Condition Terms And Condition</string>
+    <string name="text_label_payment_details">Rincian Pembayaran</string>
+    <string name="text_label_operator">Indosat %s (+62-%s)</string>
+    <string name="text_label_service_fee">Biaya Layanan</string>
+    <string name="text_label_kredivo_discount">Kredivo Diskon</string>
+    <string name="text_label_service_fee_value">Rp 490</string>
+    <string name="text_label_additional_discount">Diskon Tambahan</string>
+    <string name="text_label_additional_discount_value">Rp 1.000</string>
+    <string name="text_label_subtotal">Subtotal</string>
+    <string name="text_label_subtotal_value">Rp. 49.000</string>
+    <string name="text_label_term_payment">Bayar dalam 30 hari</string>
+    <string name="text_label_voucher">Voucher</string>
+    <string name="text_label_voucher_for_you">Voucher Untukmu</string>
+    <string name="text_btn_voucher_for_you">Lihat</string>
+    <string name="text_btn_voucher_for_you_applied">Yeay! Kamu mendapatkan promo cicilan 0%</string>
+    <string name="text_btn_payment">Bayar</string>
+    <string name="text_label_pin">PIN Kredivo</string>
+    <string name="text_hint_pin">PIN</string>
+    <string name="text_label_agreement_loan">Dengan melanjutkan saya setuju dengan Perjanjian Pinjaman Kredivo</string>
+
+
+
 </resources>

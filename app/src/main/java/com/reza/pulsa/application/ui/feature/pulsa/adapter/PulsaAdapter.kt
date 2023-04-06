@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.reza.pulsa.application.data.network.model.entity.pulsa.ProductItem
 import com.reza.pulsa.application.databinding.ItemListPulsaBinding
+import com.reza.pulsa.application.utils.Utils
 
 class PulsaAdapter(
     private val pulsaList: List<ProductItem>,
@@ -27,7 +28,11 @@ class PulsaAdapter(
 
     override fun onBindViewHolder(holder: PulsaViewHolder, position: Int) {
         holder.itemListPulsaBinding.tvNominal.text = pulsaList[position].nominal
-        holder.itemListPulsaBinding.btnTopUp.text = pulsaList[position].nominal
+
+        holder.itemListPulsaBinding.btnTopUp.text = pulsaList[position].nominal?.let {
+            Utils().formatRupiah(
+                it.toDouble())
+        }
 
         holder.itemListPulsaBinding.btnTopUp.setOnClickListener {
             listener.onItemClicked(it, pulsaList[position])

@@ -8,7 +8,6 @@ import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
-import android.widget.Toast
 import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -20,6 +19,7 @@ import com.reza.pulsa.application.databinding.FragmentPulsaBinding
 import com.reza.pulsa.application.ui.feature.promos.DetailPromosActivity
 import com.reza.pulsa.application.ui.feature.pulsa.adapter.PromosAdapter
 import com.reza.pulsa.application.ui.feature.pulsa.adapter.PulsaAdapter
+import com.reza.pulsa.application.ui.feature.transaction.TransactionActivity
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class PulsaFragment : Fragment(),
@@ -128,11 +128,14 @@ class PulsaFragment : Fragment(),
     }
 
     override fun onItemClicked(view: View, pulsaList: ProductItem) {
-        Toast.makeText(
-            requireContext(),
-            "Pulsa ${pulsaList.label} berhasil di klik",
-            Toast.LENGTH_SHORT
-        ).show()
+        activity?.let {
+            val bundle = Bundle()
+            bundle.putString(Constants.EXTRA_NUMBER_MOBILE, binding.textviewNumberMobile.text?.toString())
+            bundle.putString(Constants.EXTRA_NOMINAL, pulsaList.nominal)
+            val intent = Intent(it, TransactionActivity::class.java)
+            intent.putExtras(bundle)
+            it.startActivity(intent)
+        }
     }
 
     override fun onItemClicked(view: View, voucherList: VoucherItem) {

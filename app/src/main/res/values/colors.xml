@@ -7,4 +7,6 @@
     <color name="grey">#8F8F8F</color>
     <color name="light_grey">#DCDCDC</color>
     <color name="light_blue">#D7E5FB</color>
+    <color name="green">#398C2A</color>
+    <color name="light_green">#C3F6B9</color>
 </resources>
