@@ -54,7 +54,7 @@ class StatusActivity : AppCompatActivity() {
                 binding.tvPaymentAmount.text = data.amount
 
                 val statusPaymentAdapter =
-                    StatusPaymentAdapter(data.itemResponseList)
+                    StatusPaymentAdapter(data.itemResponseList ?: emptyList())
 
                 binding.rvListPayment.apply {
                     layoutManager = LinearLayoutManager(context)
@@ -66,10 +66,10 @@ class StatusActivity : AppCompatActivity() {
     }
 
     private fun handleBackToStartScreen() {
-        finish()
         val intent = Intent(this, PulsaActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
         startActivity(intent)
+        finish()
     }
 
 

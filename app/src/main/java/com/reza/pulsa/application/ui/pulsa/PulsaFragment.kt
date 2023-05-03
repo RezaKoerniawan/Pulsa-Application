@@ -90,7 +90,7 @@ class PulsaFragment : Fragment(),
                 data?.let { listPulsa -> PulsaAdapter(listPulsa, this@PulsaFragment) }
 
             binding.rvListPulsa.apply {
-                layoutManager = LinearLayoutManager(activity)
+                layoutManager = LinearLayoutManager(binding.root.context)
                 adapter = pulsaAdapter
             }
         }

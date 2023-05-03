@@ -60,7 +60,7 @@ legacy-support-v4 = { group = "androidx.legacy", name = "legacy-support-v4", ver
 glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
 
 [plugins]
-com-android-application = { id = "com.android.application", version.ref = "com-android-application" }
+com-android-application = { id = "com.android.application", version = "8.0.1" }
 org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "org-jetbrains-kotlin-android" }
 
 [bundles]

@@ -43,7 +43,7 @@ class VoucherActivity : AppCompatActivity(), VoucherAdapter.RecyclerViewClickLis
                     VoucherAdapter(data, this)
 
                 binding.rvListVoucher.apply {
-                    layoutManager = LinearLayoutManager(context)
+                    layoutManager = LinearLayoutManager(binding.root.context)
                     adapter = voucherAdapter
                 }
             }
